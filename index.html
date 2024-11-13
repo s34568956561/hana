@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>花錢買快樂·省錢分享</title>
+    <title>複製並跳轉</title>
+    <style>
+        h1 {
+            color: #4B2E2E; /* 設定大標題顏色為深咖啡色 */
+        }
+        h2 {
+            font-size: 18px; /* 調整小標題字體大小 */
+            color: #8B4513; /* 設定小標題顏色為咖啡色 */
+        }
+    </style>
     <script>
-        function copyAndRedirect() {
+        function copyAndRedirect(text) {
             // 創建一個暫時的輸入框來複製文字
             const tempInput = document.createElement("input");
-            tempInput.value = "11CART1113";
+            tempInput.value = text;
             document.body.appendChild(tempInput);
             tempInput.select();
             document.execCommand("copy");
@@ -20,7 +29,22 @@
     </script>
 </head>
 <body>
-    <h1>蝦皮全站699回饋105蝦幣</h1>
-    <button onclick="copyAndRedirect()">點擊複製折扣碼.</button>
+    <h1>𝟭𝟭/𝟭𝟱-𝟭𝟭/𝟭𝟳韓國購物節</h1>
+    
+    <h2>𝟭𝟭/𝟭𝟱韓國𝟭𝟴𝟴𝟴-𝟳𝟳𝟳(有𝟯組)</h2>
+    <button onclick="copyAndRedirect('KR11V2201')">第一組</button>
+    <button onclick="copyAndRedirect('KR11V2301')">第二組</button>
+    <button onclick="copyAndRedirect('KR11V2401')">第三組</button>
+    
+    <h2>𝟭𝟭/𝟭𝟲韓國𝟭𝟴𝟴𝟴-𝟳𝟳𝟳(有𝟯組)</h2>
+    <button onclick="copyAndRedirect('KR11V2202')"> 第一組</button>
+    <button onclick="copyAndRedirect('KR11V2302')">第二組</button>
+    <button onclick="copyAndRedirect('KR11V2402')">第三組</button>
+    
+    <h2>𝟭𝟭/𝟭𝟳韓國𝟭𝟴𝟴𝟴-𝟳𝟳𝟳(有𝟯組)</h2>
+    <button onclick="copyAndRedirect('KR11V2203')">第一組</button>
+    <button onclick="copyAndRedirect('KR11V2303')">第二組</button>
+    <button onclick="copyAndRedirect('KR11V2403')">第三組</button>
+
 </body>
 </html>
