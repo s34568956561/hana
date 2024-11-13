@@ -12,6 +12,12 @@
             font-size: 18px; /* 調整小標題字體大小 */
             color: #8B4513; /* 設定小標題顏色為咖啡色 */
         }
+        .info-text {
+            font-size: 14px; /* 設定文字大小，比小標題小 */
+            color: #A9A9A9; /* 設定文字顏色為淺灰色 */
+            text-align: center; /* 將文字置中 */
+            margin-top: 10px; /* 增加上方間距 */
+        }
     </style>
     <script>
         function copyAndRedirect(text) {
@@ -30,6 +36,9 @@
 </head>
 <body>
     <h1>𝟭𝟭/𝟭𝟱-𝟭𝟭/𝟭𝟳韓國購物節</h1>
+
+    <!-- 新增的提示文字 -->
+    <div class="info-text">𖤐點擊按鈕後自動複製，可以直接貼上𖤐</div>
     
     <h2>𝟭𝟭/𝟭𝟱韓國𝟭𝟴𝟴𝟴-𝟳𝟳𝟳(有𝟯組)</h2>
     <button onclick="copyAndRedirect('KR11V2201')">第一組</button>
@@ -37,7 +46,7 @@
     <button onclick="copyAndRedirect('KR11V2401')">第三組</button>
     
     <h2>𝟭𝟭/𝟭𝟲韓國𝟭𝟴𝟴𝟴-𝟳𝟳𝟳(有𝟯組)</h2>
-    <button onclick="copyAndRedirect('KR11V2202')"> 第一組</button>
+    <button onclick="copyAndRedirect('KR11V2202')">第一組</button>
     <button onclick="copyAndRedirect('KR11V2302')">第二組</button>
     <button onclick="copyAndRedirect('KR11V2402')">第三組</button>
     
