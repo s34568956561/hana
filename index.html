@@ -11,11 +11,11 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: #ff85a1;  /* 設定粉色背景 */
+            background-color: #ff85a1;  /* 粉色背景 */
             padding: 10px;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* 左右兩邊有間距 */
+            justify-content: space-between; /* 左右對齊 */
             width: 100%;
             z-index: 1000;
         }
@@ -47,7 +47,7 @@
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
-            display: none; /* 初始狀態隱藏 */
+            display: none; /* 初始隱藏 */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
@@ -63,33 +63,64 @@
             background-color: #f0f0f0;
         }
 
-        /* 讓按鈕和內容區有足夠的底部間距 */
+        /* 內容與橫幅間距 */
         body {
             padding-top: 60px; /* 讓內容不被固定橫幅遮住 */
         }
     </style>
     <script>
-        // 控制選單的顯示/隱藏
+        // 控制選單顯示/隱藏
         function toggleMenu() {
             const menu = document.getElementById("dropdown-menu");
             menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+
+        // 複製折扣碼並跳轉
+        function copyAndRedirect(text) {
+            const tempInput = document.createElement("input");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            alert("已複製折扣碼：" + text);
         }
     </script>
 </head>
 <body>
     <!-- 固定在頁面右上方的橫幅 -->
     <div class="banner">
-        <div class="text">省錢主婦</div> <!-- 左側顯示文字 -->
-        <button class="menu-button" onclick="toggleMenu()">☰</button> <!-- 右側三條槓 -->
+        <div class="text">花錢買快樂·省錢分享</div> <!-- 左側標題 -->
+        <button class="menu-button" onclick="toggleMenu()">☰</button> <!-- 三條槓按鈕 -->
     </div>
 
     <!-- 隱藏的選單 -->
     <div id="dropdown-menu" class="dropdown-menu">
-        <a href="https://www.instagram.com/discount_shopee_cheap?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank">IG</a>
-        <a href="https://line.me/ti/g2/udmZnS8nzVvhUMx7HLUbKUmIgVlEmkUqEDggpg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank">LINE 社群</a>
+        <a href="https://www.instagram.com/discount_shopee_cheap" target="_blank">IG</a>
+        <a href="https://line.me/ti/g2/udmZnS8nzVvhUMx7HLUbKUmIgVlEmkUqEDggpg" target="_blank">LINE 社群</a>
     </div>
 
     <h1>蝦皮折扣碼</h1>
-    <!-- 其餘內容保持不變 -->
+    <div class="info-text">𖤐 點擊按鈕後會自動複製折扣碼 𖤐</div>
+    
+    <h2>1/25 全站折價券</h2>
+    <button onclick="copyAndRedirect('4SKM7AT3N5')">299-30 (代碼：4SKM7AT3N5)</button>
+    <button onclick="copyAndRedirect('RMQHW6QSDF')">299-30 (代碼：RMQHW6QSDF)</button>
+    
+    <h2>1/25 商城折價券</h2>
+    <button onclick="copyAndRedirect('0125SP30')">299-30 (代碼：0125SP30)</button>
+    <button onclick="copyAndRedirect('NEWYEAR30')">299-30 (代碼：NEWYEAR30)</button>
+    
+    <h2>社群限定全站 100-20</h2>
+    <button onclick="copyAndRedirect('4PEAYT8EZ')">1/29 (代碼：4PEAYT8EZ)</button>
+    <button onclick="copyAndRedirect('65EGRXWDH')">1/26 (代碼：65EGRXWDH)</button>
+    <button onclick="copyAndRedirect('4WRKU4T23')">1/27 (代碼：4WRKU4T23)</button>
+    <button onclick="copyAndRedirect('U6C7QAXB3')">1/28 (代碼：U6C7QAXB3)</button>
+    <button onclick="copyAndRedirect('XR5FC3DE6')">1/23 (代碼：XR5FC3DE6)</button>
+    
+    <h2>社群限定全站 499-50</h2>
+    <button onclick="copyAndRedirect('X8JERFYD7')">1/23 (代碼：X8JERFYD7)</button>
+    <button onclick="copyAndRedirect('XJHNUEHQ3')">1/23 (代碼：XJHNUEHQ3)</button>
 </body>
 </html>
