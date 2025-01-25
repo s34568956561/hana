@@ -5,118 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>花錢買快樂·省錢分享</title>
     <style>
-        /* 橫幅樣式 */
-        .banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: #ff85a1;  /* 粉色背景 */
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between; /* 左右對齊 */
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .banner .text {
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        /* 三條槓按鈕 */
-        .menu-button {
-            cursor: pointer;
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: white;
-        }
-
-        .menu-button:focus {
-            outline: none;
-        }
-
-        /* 隱藏的選單 */
-        .dropdown-menu {
-            position: absolute;
-            top: 50px; /* 位於橫幅下方 */
-            right: 10px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            display: none; /* 初始隱藏 */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .dropdown-menu a {
-            display: block;
-            padding: 10px;
-            color: #333;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .dropdown-menu a:hover {
-            background-color: #f0f0f0;
-        }
-
-        /* 內容與橫幅間距 */
-        body {
-            padding-top: 60px; /* 讓內容不被固定橫幅遮住 */
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* 大標題樣式 */
         h1 {
-            margin-top: 10px; /* 縮短與橫幅的距離 */
-            text-align: center;
-            color: #333;
+            color: #4B2E2E; /* 設定大標題顏色為深咖啡色 */
         }
-
-        /* 中標題樣式 */
         h2 {
-            color: #5a3e36; /* 深咖啡色 */
-            font-size: 18px; /* 字體較小 */
-            margin-bottom: 10px;
+            font-size: 18px; /* 調整小標題字體大小 */
+            color: #8B4513; /* 設定小標題顏色為咖啡色 */
         }
-
-        /* 通用文字描述樣式 */
         .info-text {
-            text-align: center;
-            color: #555;
-            margin-bottom: 20px;
-        }
-
-        /* 按鈕樣式 */
-        button {
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            background-color: #ff85a1;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #ff6f91;
+            font-size: 14px; /* 設定文字大小，比小標題小 */
+            color: #A9A9A9; /* 設定文字顏色為淺灰色 */
+            text-align: center; /* 將文字置中 */
+            margin-top: 10px; /* 增加上方間距 */
         }
     </style>
     <script>
-        // 控制選單顯示/隱藏
-        function toggleMenu() {
-            const menu = document.getElementById("dropdown-menu");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-        }
-
-        // 複製折扣碼並跳轉
         function copyAndRedirect(text) {
+            // 創建一個暫時的輸入框來複製文字
             const tempInput = document.createElement("input");
             tempInput.value = text;
             document.body.appendChild(tempInput);
@@ -124,25 +29,21 @@
             document.execCommand("copy");
             document.body.removeChild(tempInput);
 
-            alert("已複製折扣碼：" + text);
+            // 跳轉至指定網址
+            window.location.href = "https://s.shopee.tw/9f3e0xPGgt";
+        }
+        
+        function redirectToUrl(url) {
+            // 跳轉至指定網址
+            window.location.href = url;
         }
     </script>
 </head>
 <body>
-    <!-- 固定在頁面右上方的橫幅 -->
-    <div class="banner">
-        <div class="text">省錢</div> <!-- 左側標題 -->
-        <button class="menu-button" onclick="toggleMenu()">☰</button> <!-- 三條槓按鈕 -->
-    </div>
-
-    <!-- 隱藏的選單 -->
-    <div id="dropdown-menu" class="dropdown-menu">
-        <a href="https://www.instagram.com/discount_shopee_cheap" target="_blank">IG</a>
-        <a href="https://line.me/ti/g2/udmZnS8nzVvhUMx7HLUbKUmIgVlEmkUqEDggpg" target="_blank">LINE 社群</a>
-    </div>
-
     <h1>蝦皮折扣碼</h1>
-    <div class="info-text">𖤐 點擊按鈕後會自動複製折扣碼 𖤐</div>
+
+    <!-- 新增的提示文字 -->
+    <div class="info-text">𖤐點擊按鈕後會自動複製，可以直接貼上𖤐</div>
     
     <h2>𝟭/𝟮𝟱全站折價卷</h2>
     <button onclick="copyAndRedirect('4SKM7AT3N5')">𝟮𝟵𝟵-𝟯𝟬</button>
@@ -188,5 +89,11 @@
     <button onclick="copyAndRedirect('FNBO30SHA')">𝟭/𝟯𝟬</button>
     <button onclick="copyAndRedirect('FNBO31SHA')">𝟭/𝟯𝟭</button>
     
+
+
+    
+    <!-- 新增的按鈕 -->
+    <h2>優惠社群</h2>
+    <button onclick="redirectToUrl('https://reurl.cc/d15d52')">歡迎加入，優惠、折扣搶先看</button>
 </body>
 </html>
